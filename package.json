@@ -1,5 +1,5 @@
 {
-  "name": "leetcode",
+  "name": "leetcode-practice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "dev" : "tsc-watch --onSuccess \"node dist/index.js\""
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sagar Maheshwary",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.4.8",
     "ts-node": "^10.9.1",
