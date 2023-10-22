@@ -1,25 +1,25 @@
-function binarySearch(array: number[], target: number): number {
-  const length = array.length;
+function binarySearch(arr: number[], target: number): number {
+  let leftIndex = 0;
+  let rightIndex = arr.length - 1;
 
-  let medium = 0;
+  while (leftIndex <= rightIndex) {
+    let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
 
-  if (length > 1) {
-    medium = Number((length / 2).toFixed());
-  }
+    if (arr[middleIndex] === target) {
+      return middleIndex;
+    }
 
-  const start = target > medium ? medium : 0;
-  const end = target > medium ? length : medium;
-
-  console.log("STARTING FROM: ", target > medium ? "MIDDLE" : "BEGINNING");
-  console.log("ENDING ON: ", end);
-
-  for (let i = start; i < end; i++) {
-    if (array[i] === target) {
-      return i;
+    if (arr[middleIndex] > target) {
+      rightIndex = middleIndex - 1;
+    } else {
+      leftIndex = middleIndex + 1;
     }
   }
 
   return -1;
 }
 
-console.log("BINARY SEARCH", binarySearch([0, 3, 4, 5, 6, 8].sort(), 3));
+console.log(
+  "BINARY SEARCH",
+  binarySearch([1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10], 4)
+);

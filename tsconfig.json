@@ -6,13 +6,14 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"target": "ES6",
-		"noImplicitAny": true,
+		"noImplicitAny": false,
 		"moduleResolution": "Node",
 		"sourceMap": false,
 		"outDir": "dist",
 		"baseUrl": "./src/",
 		"strictNullChecks": false,
-		"declaration": true
+		"declaration": true,
+		"lib": ["ES6"]
 	},
 	"include": ["./src/**/*"],
 	"exclude": ["./node_modules", "**/*.spec.ts"]
